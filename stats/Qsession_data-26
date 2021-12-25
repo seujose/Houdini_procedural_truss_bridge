@@ -1,0 +1,60 @@
+{
+	"stats":{
+		"start_time":1640336260,
+		"end_time":1640354092,
+		"idle_time":14586,
+		"log_id":"0xC13EDE56-0x0000321C-0x61C58B86-0x00000304",
+		"persistent_stats":{
+			"colors_scheme":"Houdini Dark"
+		},
+		"flags":[
+		],
+		"counts":{
+			"tools/shelf|(custom_tool)":1,
+			"tools/network/Sop|sop_uvflatten::3.0":2,
+			"tools/network/Sop|geo_group":4,
+			"tools/network/Sop|sop_uvproject":1,
+			"hotkey/h.pane.textport.pagedown":1,
+			"tools/network/Sop|sop_uvlayout::3.0":3,
+			"hotkey/h.floatpanel":1,
+			"hotkey/h.pane.split_lr":1,
+			"tools/network/Sop|sop_line":1,
+			"hotkey/h.pane.split_tb":1,
+			"hotkey/h.undo":3,
+			"tools/network/Sop|sop_bound":1,
+			"tools/network/Sop|sop_measure::2.0":2,
+			"tools/network/Sop|sop_uvunwrap":3,
+			"tools/shelf|hengine_plugin_installer":1,
+			"tools/network/Sop|sop_uvquickshade":2,
+			"tools/network/Sop|sop_convertline":1,
+			"tools/network/Sop|sop_uvtransform::2.0":3,
+			"hotkey/h.pane.gview.state.view.home_cplane":5,
+			"tools/network/Sop|sop_uvfuse":1
+		},
+		"logs":{
+		},
+		"sums_and_counts":{
+		},
+		"strings":{
+		},
+		"checksum":"b7681714033e22bb8eed98b72aa3d823"
+	},
+	"machine_config":{
+		"houdini_major_version":"19",
+		"houdini_minor_version":"0",
+		"houdini_build_version":"455",
+		"application_name":"hindie",
+		"license_category":"Indie",
+		"platform":"windows-x86_64-cl19.29",
+		"operating_system":"Windows 10 Pro x64",
+		"number_of_processors":16,
+		"system_memory":"15.91 GB",
+		"graphics_card":"NVIDIA GeForce GTX 1650/PCIe/SSE2",
+		"graphics_card_version":"4.6.0 NVIDIA 472.47",
+		"mac_address_hash":"3aa49c7fa54674f23880294830acc28e",
+		"user_config_version":20140523,
+		"system_resolution":"1920x1080",
+		"cpu_info":"AMD Ryzen 7 1800X Eight-Core Processor",
+		"config_hash":"acdc929bda25a706206df8ef2d760cc1"
+	}
+}

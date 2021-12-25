@@ -1,0 +1,34 @@
+HIP
+{
+C:/Users/master/Documents/houdini19.0/scenes/backup/howe_truss_bak42.hiplc
+C:/Users/master/Documents/GitHub/proceduralCorridor/houdini/temp.hiplc
+C:/Program Files (x86)/Steam/steamapps/common/Houdini Indie/bin/backup/untitled_bak185.hiplc
+C:/Program Files (x86)/Steam/steamapps/common/Houdini Indie/bin/untitled.hiplc
+C:/Users/master/Documents/houdini19.0/scenes/backup/howe_truss_bak132.hiplc
+C:/Users/master/Documents/houdini19.0/scenes/backup/howe_truss_bak43.hiplc
+C:/Users/master/Documents/houdini19.0/scenes/backup/howe_truss_bak7.hiplc
+C:/Users/master/Documents/houdini19.0/scenes/backup/howe_truss_bak1.hiplc
+C:/Users/master/Documents/GitHub/proceduralCorridor/houdini/final_truss_bridge_unreal.hiplc
+C:/Users/master/Documents/GitHub/proceduralCorridor/houdini/final_truss_bridge.hiplc
+C:/Users/master/Documents/houdini19.0/scenes/howe_truss.hiplc
+}
+GEO
+{
+$HOME/GitHub/proceduralCorridor/maya/truss_bridge/assets/mesh_b.fbx
+$HOME/GitHub/proceduralCorridor/maya/truss_bridge/assets/mesh_a.fbx
+}
+OTL
+{
+C:/PROGRA~2/Steam/STEAMA~1/common/HOUDIN~1/houdini/otls/he_delete_small_parts.hda
+C:/PROGRA~2/Steam/STEAMA~1/common/HOUDIN~1/houdini/otls/he_curve_instancer.hda
+C:/PROGRA~2/Steam/STEAMA~1/common/HOUDIN~1/houdini/otls/he_calculate_occlusion.hda
+C:/PROGRA~2/Steam/STEAMA~1/common/HOUDIN~1/houdini/otls/he_boolean.hda
+C:/PROGRA~2/Steam/STEAMA~1/common/HOUDIN~1/packages/kinefx/otls/OPlibKineFX.hda
+C:/Users/master/Documents/GitHub/proceduralCorridor/houdini/hda/truss_bridge_v7.hdalc
+C:/Users/master/Documents/houdini19.0/otls/master_object_merge5.hdalc
+C:/Users/master/Documents/GitHub/proceduralCorridor/houdini/hda/final_howe_truss.hdalc
+$HOME/houdini19.0/otls/howe_truss_v1.hdalc
+C:/Users/master/Documents/houdini19.0/otls/howe_truss_v1.hdalc
+C:/Users/master/Documents/houdini19.0/otls/master_subnet1.hdalc
+C:/Users/master/Documents/houdini19.0/otls/howe_truss.hdalc
+}

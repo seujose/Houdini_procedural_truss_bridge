@@ -1,0 +1,79 @@
+// Magic: 89cf850b
+// Automatically generated PSI dialog (PSI version 19.0.455)
+// Fri Dec 17 07:21:21 2021
+
+
+f_tmp = FLOAT_FIELD;	// dialog.top.ui
+
+step.gad = 
+{
+
+ LAYOUT(horizontal) HSTRETCH
+ { WIDTH(0.18) }
+
+ step.label = PARM_LABEL("step", "step") WIDTH(1.5);
+ PARM(integer, 1, "step", none, none) RANGE(2,6)
+	 LABELREF(step.label) HSTRETCH;
+
+  { WIDTH(0.1) }
+}
+
+supportOffset.gad = 
+{
+
+ LAYOUT(horizontal) HSTRETCH
+ { WIDTH(0.18) }
+
+ supportOffset.label = PARM_LABEL("supportOffset", "supportOffset") WIDTH(1.5);
+ PARM(float, 1, "supportOffset", none, none) RANGE(0,1)
+	 LABELREF(supportOffset.label) HSTRETCH;
+
+  { WIDTH(0.1) }
+}
+
+height.gad = 
+{
+
+ LAYOUT(horizontal) HSTRETCH
+ { WIDTH(0.18) }
+
+ height.label = PARM_LABEL("height", "height") WIDTH(1.5);
+ PARM(float, 1, "height", none, none) RANGE(3,5)
+	 LABELREF(height.label) HSTRETCH;
+
+  { WIDTH(0.1) }
+}
+
+bridgeWidth.gad = 
+{
+
+ LAYOUT(horizontal) HSTRETCH
+ { WIDTH(0.18) }
+
+ bridgeWidth.label = PARM_LABEL("bridgeWidth", "bridgeWidth") WIDTH(1.5);
+ PARM(float, 1, "bridgeWidth", none, none) RANGE(2,4)
+	 LABELREF(bridgeWidth.label) HSTRETCH;
+
+  { WIDTH(0.1) }
+}
+
+dialog_norm.gad = 
+{
+    LAYOUT(vertical) SPACING(0.02) HSTRETCH 
+    step.gad; 
+    supportOffset.gad; 
+    height.gad; 
+    bridgeWidth.gad; 
+} 
+// dialog.bot.ui
+
+extrastuffstowbar_minimize.val := 1;
+
+dialog = OPENNOTIFIER
+{
+    LAYOUT(vertical) SPACING(0.02) LOOK(bg) VALUE(open.val_) HSTRETCH
+
+    { HEIGHT(1p) LOOK(bg) HSTRETCH }
+
+    dialog_norm.gad;
+}

@@ -1,0 +1,183 @@
+// Magic: f875d15e
+// Automatically generated PSI dialog (PSI version 19.0.455)
+// Thu Dec 23 16:41:59 2021
+
+
+f_tmp = FLOAT_FIELD;	// dialog.top.ui
+
+meshPath.gad = 
+{
+ LAYOUT(horizontal) HSTRETCH JUSTIFY(left,center)
+ { WIDTH(0.18) }
+
+ meshPath.label = PARM_LABEL("meshPath", "meshPath") WIDTH(1.5);
+ PARM_FIELD(pathstring, "meshPath") VALUE(meshPath.val) 
+	LABELREF(meshPath.label) HSTRETCH;
+
+ ACTION_ICONBUTTON "BUTTONS_jump" VALUE(meshPath.jump)
+    HELP("Jump to operator\nCtrl+LMB: Open parameters popup dialog")
+    UI_FLAT_ICON_BTN_SIZE_SMALL LOOKFLAT;
+
+ ACTION_ICONBUTTON "BUTTONS_chooser_node" VALUE(meshPath.plus)
+    HELP("Open floating operator chooser") UI_FLAT_ICON_BTN_SIZE_SMALL 
+    LOOKFLAT;
+
+ { WIDTH(0.1) }
+}
+
+curvePath.gad = 
+{
+ LAYOUT(horizontal) HSTRETCH JUSTIFY(left,center)
+ { WIDTH(0.18) }
+
+ curvePath.label = PARM_LABEL("curvePath", "curvePath") WIDTH(1.5);
+ PARM_FIELD(pathstring, "curvePath") VALUE(curvePath.val) 
+	LABELREF(curvePath.label) HSTRETCH;
+
+ ACTION_ICONBUTTON "BUTTONS_jump" VALUE(curvePath.jump)
+    HELP("Jump to operator\nCtrl+LMB: Open parameters popup dialog")
+    UI_FLAT_ICON_BTN_SIZE_SMALL LOOKFLAT;
+
+ ACTION_ICONBUTTON "BUTTONS_chooser_node" VALUE(curvePath.plus)
+    HELP("Open floating operator chooser") UI_FLAT_ICON_BTN_SIZE_SMALL 
+    LOOKFLAT;
+
+ { WIDTH(0.1) }
+}
+
+height.gad = 
+{
+
+ LAYOUT(horizontal) HSTRETCH
+ { WIDTH(0.18) }
+
+ height.label = PARM_LABEL("height", "height") WIDTH(1.5);
+ PARM(float, 1, "height", none, none) RANGE(0,10)
+	 LABELREF(height.label) HSTRETCH;
+
+  { WIDTH(0.1) }
+}
+
+step.gad = 
+{
+
+ LAYOUT(horizontal) HSTRETCH
+ { WIDTH(0.18) }
+
+ step.label = PARM_LABEL("step", "step") WIDTH(1.5);
+ PARM(float, 1, "step", none, none) RANGE(0,10)
+	 LABELREF(step.label) HSTRETCH;
+
+  { WIDTH(0.1) }
+}
+
+endsOffset.gad = 
+{
+
+ LAYOUT(horizontal) HSTRETCH
+ { WIDTH(0.18) }
+
+ endsOffset.label = PARM_LABEL("endsOffset", "endsOffset") WIDTH(1.5);
+ PARM(float, 1, "endsOffset", none, none) RANGE(0,10)
+	 LABELREF(endsOffset.label) HSTRETCH;
+
+  { WIDTH(0.1) }
+}
+
+supportOffset.gad = 
+{
+
+ LAYOUT(horizontal) HSTRETCH
+ { WIDTH(0.18) }
+
+ supportOffset.label = PARM_LABEL("supportOffset", "supportOffset") WIDTH(1.5);
+ PARM(float, 1, "supportOffset", none, none) RANGE(0,10)
+	 LABELREF(supportOffset.label) HSTRETCH;
+
+  { WIDTH(0.1) }
+}
+
+Width.gad = 
+{
+
+ LAYOUT(horizontal) HSTRETCH
+ { WIDTH(0.18) }
+
+ Width.label = PARM_LABEL("Width", "Width") WIDTH(1.5);
+ PARM(float, 1, "Width", none, none) RANGE(0,10)
+	 LABELREF(Width.label) HSTRETCH;
+
+  { WIDTH(0.1) }
+}
+
+defaultMesh.gad = 
+{
+
+ LAYOUT(horizontal) HSTRETCH
+ { WIDTH(0.18) }
+
+ defaultMesh.label = PARM_LABEL("defaultMesh", "defaultMesh") WIDTH(1.5);
+ PARM(integer, 1, "defaultMesh", none, none) RANGE(0,1)
+	 LABELREF(defaultMesh.label) HSTRETCH;
+
+  { WIDTH(0.1) }
+}
+
+meshLevel1.gad = ROW
+{
+   HSTRETCH
+   { WIDTH(0.18) }
+
+   meshLevel1.label = PARM_LABEL("meshLevel1", "meshLevel1") WIDTH(1.5);
+   PARM(float, 3, "meshLevel1", none, none, "X,Y,Z")
+	RANGE(-1,1)  LABELREF(meshLevel1.label)
+	HSTRETCH;
+
+    { WIDTH(0.1) }
+}
+
+mesh.gad = 
+{
+    LAYOUT(vertical) HSTRETCH
+
+    TABDIALOG2 flat "mesh.gad"
+    { 
+	VALUE(mesh.gad.val) STRETCH(1,0)
+
+	TAB "mesh"
+	{
+	    LAYOUT(vertical) STRETCH
+
+            HMARGIN(0) VMARGIN(2p) SPACING(0, 2p)
+	    meshLevel1.gad;		
+
+	    { STRETCH(1,1) }
+	}
+    } 
+}
+
+dialog_norm.gad = 
+{
+    LAYOUT(vertical) SPACING(0.02) HSTRETCH 
+    meshPath.gad; 
+    curvePath.gad; 
+    height.gad; 
+    step.gad; 
+    endsOffset.gad; 
+    supportOffset.gad; 
+    Width.gad; 
+    defaultMesh.gad; 
+    mesh.gad; 
+} 
+// dialog.bot.ui
+
+extrastuffstowbar_minimize.val := 1;
+
+dialog = OPENNOTIFIER
+{
+    LAYOUT(vertical) SPACING(0.02) LOOK(bg) VALUE(open.val_) HSTRETCH
+
+    { HEIGHT(1p) LOOK(bg) HSTRETCH }
+
+    dialog_norm.gad;
+}

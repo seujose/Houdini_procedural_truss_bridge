@@ -1,0 +1,19 @@
+HIP
+{
+C:/Program Files (x86)/Steam/steamapps/common/Houdini Indie/bin/
+C:/Users/master/Documents/houdini19.0/scenes/backup/
+C:/Users/master/Documents/GitHub/proceduralCorridor/houdini/
+C:/Users/master/Documents/houdini19.0/scenes/
+}
+GEO
+{
+$HOME/GitHub/proceduralCorridor/maya/truss_bridge/assets/
+}
+OTL
+{
+C:/PROGRA~2/Steam/STEAMA~1/common/HOUDIN~1/houdini/otls/
+C:/PROGRA~2/Steam/STEAMA~1/common/HOUDIN~1/packages/kinefx/otls/
+C:/Users/master/Documents/GitHub/proceduralCorridor/houdini/hda/
+$HOME/houdini19.0/otls/
+C:/Users/master/Documents/houdini19.0/otls/
+}
