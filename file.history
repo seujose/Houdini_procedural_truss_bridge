@@ -10,12 +10,15 @@ C:/Users/master/Documents/houdini19.0/scenes/backup/howe_truss_bak7.hiplc
 C:/Users/master/Documents/houdini19.0/scenes/backup/howe_truss_bak1.hiplc
 C:/Users/master/Documents/GitHub/proceduralCorridor/houdini/final_truss_bridge_unreal.hiplc
 C:/Users/master/Documents/GitHub/proceduralCorridor/houdini/final_truss_bridge.hiplc
+C:/Users/master/Documents/houdini19.0/scenes/test.hiplc
 C:/Users/master/Documents/houdini19.0/scenes/howe_truss.hiplc
 }
 GEO
 {
 $HOME/GitHub/proceduralCorridor/maya/truss_bridge/assets/mesh_b.fbx
 $HOME/GitHub/proceduralCorridor/maya/truss_bridge/assets/mesh_a.fbx
+$HOUDINI_USER_PREF_DIR/maya/truss/assets/pCube2.fbx
+$HOUDINI_USER_PREF_DIR/maya/truss/assets/pCube1.fbx
 }
 OTL
 {

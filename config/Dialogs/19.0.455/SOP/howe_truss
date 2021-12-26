@@ -1,49 +1,9 @@
-// Magic: f875d15e
+// Magic: 8980a5af
 // Automatically generated PSI dialog (PSI version 19.0.455)
-// Thu Dec 23 16:41:59 2021
+// Sun Dec 26 14:33:46 2021
 
 
 f_tmp = FLOAT_FIELD;	// dialog.top.ui
-
-meshPath.gad = 
-{
- LAYOUT(horizontal) HSTRETCH JUSTIFY(left,center)
- { WIDTH(0.18) }
-
- meshPath.label = PARM_LABEL("meshPath", "meshPath") WIDTH(1.5);
- PARM_FIELD(pathstring, "meshPath") VALUE(meshPath.val) 
-	LABELREF(meshPath.label) HSTRETCH;
-
- ACTION_ICONBUTTON "BUTTONS_jump" VALUE(meshPath.jump)
-    HELP("Jump to operator\nCtrl+LMB: Open parameters popup dialog")
-    UI_FLAT_ICON_BTN_SIZE_SMALL LOOKFLAT;
-
- ACTION_ICONBUTTON "BUTTONS_chooser_node" VALUE(meshPath.plus)
-    HELP("Open floating operator chooser") UI_FLAT_ICON_BTN_SIZE_SMALL 
-    LOOKFLAT;
-
- { WIDTH(0.1) }
-}
-
-curvePath.gad = 
-{
- LAYOUT(horizontal) HSTRETCH JUSTIFY(left,center)
- { WIDTH(0.18) }
-
- curvePath.label = PARM_LABEL("curvePath", "curvePath") WIDTH(1.5);
- PARM_FIELD(pathstring, "curvePath") VALUE(curvePath.val) 
-	LABELREF(curvePath.label) HSTRETCH;
-
- ACTION_ICONBUTTON "BUTTONS_jump" VALUE(curvePath.jump)
-    HELP("Jump to operator\nCtrl+LMB: Open parameters popup dialog")
-    UI_FLAT_ICON_BTN_SIZE_SMALL LOOKFLAT;
-
- ACTION_ICONBUTTON "BUTTONS_chooser_node" VALUE(curvePath.plus)
-    HELP("Open floating operator chooser") UI_FLAT_ICON_BTN_SIZE_SMALL 
-    LOOKFLAT;
-
- { WIDTH(0.1) }
-}
 
 height.gad = 
 {
@@ -54,6 +14,45 @@ height.gad =
  height.label = PARM_LABEL("height", "height") WIDTH(1.5);
  PARM(float, 1, "height", none, none) RANGE(0,10)
 	 LABELREF(height.label) HSTRETCH;
+
+  { WIDTH(0.1) }
+}
+
+uvRepeat.gad = ROW
+{
+   HSTRETCH
+   { WIDTH(0.18) }
+
+   uvRepeat.label = PARM_LABEL("uvRepeat", "uvRepeat") WIDTH(1.5);
+   PARM(float, 2, "uvRepeat", none, none, "X,Y")
+	RANGE(-1,1)  LABELREF(uvRepeat.label)
+	HSTRETCH;
+
+    { WIDTH(0.1) }
+}
+
+uvRepeat2.gad = ROW
+{
+   HSTRETCH
+   { WIDTH(0.18) }
+
+   uvRepeat2.label = PARM_LABEL("uvRepeat2", "uvRepeat2") WIDTH(1.5);
+   PARM(float, 2, "uvRepeat2", none, none, "X,Y")
+	RANGE(-1,1)  LABELREF(uvRepeat2.label)
+	HSTRETCH;
+
+    { WIDTH(0.1) }
+}
+
+uv.gad = 
+{
+
+ LAYOUT(horizontal) HSTRETCH
+ { WIDTH(0.18) }
+
+ uv.label = PARM_LABEL("uv", "uv") WIDTH(1.5);
+ PARM(float, 1, "uv", none, none) RANGE(1,10)
+	 LABELREF(uv.label) HSTRETCH;
 
   { WIDTH(0.1) }
 }
@@ -91,7 +90,7 @@ supportOffset.gad =
  { WIDTH(0.18) }
 
  supportOffset.label = PARM_LABEL("supportOffset", "supportOffset") WIDTH(1.5);
- PARM(float, 1, "supportOffset", none, none) RANGE(0,10)
+ PARM(float, 1, "supportOffset", none, none) RANGE(0.10000000000000001,0.29999999999999999)
 	 LABELREF(supportOffset.label) HSTRETCH;
 
   { WIDTH(0.1) }
@@ -136,38 +135,75 @@ meshLevel1.gad = ROW
     { WIDTH(0.1) }
 }
 
-mesh.gad = 
+meshPath.gad = 
 {
-    LAYOUT(vertical) HSTRETCH
+ LAYOUT(horizontal) HSTRETCH JUSTIFY(left,center)
+ { WIDTH(0.18) }
 
-    TABDIALOG2 flat "mesh.gad"
-    { 
-	VALUE(mesh.gad.val) STRETCH(1,0)
+ meshPath.label = PARM_LABEL("meshPath", "meshPath") WIDTH(1.5);
+ PARM_FIELD(pathstring, "meshPath") VALUE(meshPath.val) 
+	LABELREF(meshPath.label) HSTRETCH;
 
-	TAB "mesh"
-	{
-	    LAYOUT(vertical) STRETCH
+ ACTION_ICONBUTTON "BUTTONS_jump" VALUE(meshPath.jump)
+    HELP("Jump to operator\nCtrl+LMB: Open parameters popup dialog")
+    UI_FLAT_ICON_BTN_SIZE_SMALL LOOKFLAT;
 
-            HMARGIN(0) VMARGIN(2p) SPACING(0, 2p)
-	    meshLevel1.gad;		
+ ACTION_ICONBUTTON "BUTTONS_chooser_node" VALUE(meshPath.plus)
+    HELP("Open floating operator chooser") UI_FLAT_ICON_BTN_SIZE_SMALL 
+    LOOKFLAT;
 
-	    { STRETCH(1,1) }
-	}
-    } 
+ { WIDTH(0.1) }
 }
+
+curvePath.gad = 
+{
+ LAYOUT(horizontal) HSTRETCH JUSTIFY(left,center)
+ { WIDTH(0.18) }
+
+ curvePath.label = PARM_LABEL("curvePath", "curvePath") WIDTH(1.5);
+ PARM_FIELD(pathstring, "curvePath") VALUE(curvePath.val) 
+	LABELREF(curvePath.label) HSTRETCH;
+
+ ACTION_ICONBUTTON "BUTTONS_jump" VALUE(curvePath.jump)
+    HELP("Jump to operator\nCtrl+LMB: Open parameters popup dialog")
+    UI_FLAT_ICON_BTN_SIZE_SMALL LOOKFLAT;
+
+ ACTION_ICONBUTTON "BUTTONS_chooser_node" VALUE(curvePath.plus)
+    HELP("Open floating operator chooser") UI_FLAT_ICON_BTN_SIZE_SMALL 
+    LOOKFLAT;
+
+ { WIDTH(0.1) }
+}
+
+folder1.gad = 
+GROUP collapsible "Folder Name" flat  
+{
+    VALUE(folder1.gad.val) LAYOUT(vertical) HSTRETCH
+	    meshPath.gad;		
+	    curvePath.gad;		
+} 
+
+mesh.gad = 
+GROUP collapsible "mesh" flat  
+{
+    VALUE(mesh.gad.val) LAYOUT(vertical) HSTRETCH
+	    meshLevel1.gad;		
+} 
 
 dialog_norm.gad = 
 {
     LAYOUT(vertical) SPACING(0.02) HSTRETCH 
-    meshPath.gad; 
-    curvePath.gad; 
     height.gad; 
+    uvRepeat.gad; 
+    uvRepeat2.gad; 
+    uv.gad; 
     step.gad; 
     endsOffset.gad; 
     supportOffset.gad; 
     Width.gad; 
     defaultMesh.gad; 
     mesh.gad; 
+    folder1.gad; 
 } 
 // dialog.bot.ui
 
