@@ -12,4 +12,12 @@ if mw.isFullScreen():
 else:
     mw.showFullScreen()]]></script>
   </tool>
+
+  <tool name="tool_2" label="New Tool" icon="PLASMA_App">
+    <script scriptType="python"><![CDATA[mw = hou.qt.mainWindow()
+if mw.isFullScreen():
+    mw.showMaximized()
+else:
+    mw.showFullScreen()]]></script>
+  </tool>
 </shelfDocument>

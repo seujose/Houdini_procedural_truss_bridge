@@ -1,3 +1,5 @@
-
-config/Icons/SVGIcons.cache
-config/Icons/SVGIcons.cache.serial
+config/
+scripts/
+stats/
+toolbar/
+font.cache
