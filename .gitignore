@@ -3,3 +3,7 @@ scripts/
 stats/
 toolbar/
 font.cache
+scenes/backup/
+dso.cache
+otls/backup/
+
