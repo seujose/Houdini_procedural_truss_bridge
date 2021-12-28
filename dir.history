@@ -8,6 +8,9 @@ C:/Users/master/Documents/houdini19.0/scenes/
 GEO
 {
 $HOME/GitHub/proceduralCorridor/maya/truss_bridge/assets/
+$HOUDINI_USER_PREF_DIR/maya/truss/assets/
+$HOUDINI_USER_PREF_DIR/unreal/truss/Content/
+$HOME/houdini19.0/maya/truss/assets/
 }
 OTL
 {
