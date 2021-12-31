@@ -87,4 +87,5 @@ packages/
 unreal/truss/Intermediate/
 unreal/truss/Saved/
 unreal/truss/Content/MSPresets/
-unreal/truss/Content/Megascans/3D_Assets/Worn_Wooden_Beam_tgmrafyfa/T_Worn_Wooden_Beam_tgmrafyfa_2K_D.uasset
+unreal/truss/Content/Megascans/
+unreal/truss/Content/HoudiniEngine/Temp/howe_truss/CDD74815/howe_truss_1408_30_2_main_geo.uasset

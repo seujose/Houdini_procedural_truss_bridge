@@ -5,6 +5,12 @@ C:/Users/master/Documents/houdini19.0/scenes/backup/
 C:/Users/master/Documents/GitHub/proceduralCorridor/houdini/
 C:/Users/master/Documents/houdini19.0/scenes/
 }
+PIC
+{
+$HOUDINI_USER_PREF_DIR/maya/truss/assets/
+$HFS/houdini/pic/hdri/
+$HOME/houdini19.0/maya/truss/assets/
+}
 GEO
 {
 $HOME/GitHub/proceduralCorridor/maya/truss_bridge/assets/

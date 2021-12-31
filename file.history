@@ -17,6 +17,8 @@ PIC
 {
 $HOUDINI_USER_PREF_DIR/maya/truss/assets/T_Worn_Wooden_Beam_tgmrafyfa_2K_D.HDR
 $HOUDINI_USER_PREF_DIR/maya/truss/assets/T_Worn_Wooden_Beam_tgmrafyfa_2K_D.png
+$HFS/houdini/pic/hdri/HDRIHaven_kiara_5_noon_2k.rat
+$HOME/houdini19.0/maya/truss/assets/T_Worn_Wooden_Beam_tgmrafyfa_2K_D.jpg
 }
 GEO
 {
