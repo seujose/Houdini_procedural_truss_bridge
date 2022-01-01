@@ -1,6 +1,6 @@
-// Magic: 3fc3619f
+// Magic: 6239206d
 // Automatically generated PSI dialog (PSI version 19.0.455)
-// Fri Dec 31 06:23:30 2021
+// Sat Jan  1 10:08:12 2022
 
 
 f_tmp = FLOAT_FIELD;	// dialog.top.ui
@@ -109,19 +109,6 @@ defaultMesh.gad =
   { WIDTH(0.1) }
 }
 
-meshLevel1.gad = ROW
-{
-   HSTRETCH
-   { WIDTH(0.18) }
-
-   meshLevel1.label = PARM_LABEL("meshLevel1", "meshLevel1") WIDTH(1.5);
-   PARM(float, 3, "meshLevel1", none, none, "X,Y,Z")
-	RANGE(-1,1)  LABELREF(meshLevel1.label)
-	HSTRETCH;
-
-    { WIDTH(0.1) }
-}
-
 meshLevel2.gad = ROW
 {
    HSTRETCH
@@ -146,58 +133,6 @@ meshLevel3.gad = ROW
 	HSTRETCH;
 
     { WIDTH(0.1) }
-}
-
-dist.gad = 
-{
-
- LAYOUT(horizontal) HSTRETCH
- { WIDTH(0.18) }
-
- dist.label = PARM_LABEL("Length", "dist") WIDTH(1.5);
- PARM(float, 1, "dist", none, none) RANGE(0,10)
-	 LABELREF(dist.label) HSTRETCH;
-
-  { WIDTH(0.1) }
-}
-
-points.gad = 
-{
-
- LAYOUT(horizontal) HSTRETCH
- { WIDTH(0.18) }
-
- points.label = PARM_LABEL("Points", "points") WIDTH(1.5);
- PARM(integer, 1, "points", none, none) RANGE(0,50)
-	LOCK_RANGE_MIN LABELREF(points.label) HSTRETCH;
-
-  { WIDTH(0.1) }
-}
-
-dist2.gad = 
-{
-
- LAYOUT(horizontal) HSTRETCH
- { WIDTH(0.18) }
-
- dist2.label = PARM_LABEL("Length", "dist2") WIDTH(1.5);
- PARM(float, 1, "dist2", none, none) RANGE(0,10)
-	 LABELREF(dist2.label) HSTRETCH;
-
-  { WIDTH(0.1) }
-}
-
-points2.gad = 
-{
-
- LAYOUT(horizontal) HSTRETCH
- { WIDTH(0.18) }
-
- points2.label = PARM_LABEL("Points", "points2") WIDTH(1.5);
- PARM(integer, 1, "points2", none, none) RANGE(0,50)
-	LOCK_RANGE_MIN LABELREF(points2.label) HSTRETCH;
-
-  { WIDTH(0.1) }
 }
 
 meshPath.gad = 
@@ -240,23 +175,80 @@ curvePath.gad =
  { WIDTH(0.1) }
 }
 
-baseMesh_path.gad = 
-GROUP collapsible "baseMesh_path" flat  
+base_mesh.gad = ROW
 {
-    VALUE(baseMesh_path.gad.val) LAYOUT(vertical) HSTRETCH
-	    meshPath.gad;		
-	    curvePath.gad;		
-} 
+   HSTRETCH
+   { WIDTH(0.18) }
 
-plankA.gad = 
+   base_mesh.label = PARM_LABEL("base_mesh", "base_mesh") WIDTH(1.5);
+   PARM(float, 3, "base_mesh", none, none, "X,Y,Z")
+	RANGE(-1,1)  LABELREF(base_mesh.label)
+	HSTRETCH;
+
+    { WIDTH(0.1) }
+}
+
+dist.gad = 
+{
+
+ LAYOUT(horizontal) HSTRETCH
+ { WIDTH(0.18) }
+
+ dist.label = PARM_LABEL("Length", "dist") WIDTH(1.5);
+ PARM(float, 1, "dist", none, none) RANGE(0,10)
+	 LABELREF(dist.label) HSTRETCH;
+
+  { WIDTH(0.1) }
+}
+
+points.gad = 
+{
+
+ LAYOUT(horizontal) HSTRETCH
+ { WIDTH(0.18) }
+
+ points.label = PARM_LABEL("Points", "points") WIDTH(1.5);
+ PARM(integer, 1, "points", none, none) RANGE(1,50)
+	LOCK_RANGE_MIN LABELREF(points.label) HSTRETCH;
+
+  { WIDTH(0.1) }
+}
+
+dist2.gad = 
+{
+
+ LAYOUT(horizontal) HSTRETCH
+ { WIDTH(0.18) }
+
+ dist2.label = PARM_LABEL("Length", "dist2") WIDTH(1.5);
+ PARM(float, 1, "dist2", none, none) RANGE(0,10)
+	 LABELREF(dist2.label) HSTRETCH;
+
+  { WIDTH(0.1) }
+}
+
+points2.gad = 
+{
+
+ LAYOUT(horizontal) HSTRETCH
+ { WIDTH(0.18) }
+
+ points2.label = PARM_LABEL("Points", "points2") WIDTH(1.5);
+ PARM(integer, 1, "points2", none, none) RANGE(1,50)
+	LOCK_RANGE_MIN LABELREF(points2.label) HSTRETCH;
+
+  { WIDTH(0.1) }
+}
+
+meshLevel0.gad = 
 {
     LAYOUT(vertical) HSTRETCH
 
-    TABDIALOG2 flat "plankA.gad"
+    TABDIALOG2 flat "meshLevel0.gad"
     { 
-	VALUE(plankA.gad.val) STRETCH(1,0)
+	VALUE(meshLevel0.gad.val) STRETCH(1,0)
 
-	TAB "plankA"
+	TAB "meshLevel0"
 	{
 	    LAYOUT(vertical) STRETCH
 
@@ -267,7 +259,7 @@ plankA.gad =
 	    { STRETCH(1,1) }
 	}
 
-	TAB "plankB"
+	TAB "meshLevel1"
 	{
 	    LAYOUT(vertical) STRETCH
 
@@ -280,14 +272,28 @@ plankA.gad =
     } 
 }
 
+mesh2.gad = 
+GROUP collapsible "mesh" flat  
+{
+    VALUE(mesh2.gad.val) LAYOUT(vertical) HSTRETCH
+	    base_mesh.gad;		
+	    meshLevel0.gad;		
+} 
+
+baseMesh_path.gad = 
+GROUP collapsible "baseMesh_path" flat  
+{
+    VALUE(baseMesh_path.gad.val) LAYOUT(vertical) HSTRETCH
+	    meshPath.gad;		
+	    curvePath.gad;		
+} 
+
 mesh.gad = 
 GROUP collapsible "mesh" flat  
 {
     VALUE(mesh.gad.val) LAYOUT(vertical) HSTRETCH
-	    meshLevel1.gad;		
 	    meshLevel2.gad;		
 	    meshLevel3.gad;		
-	    plankA.gad;		
 } 
 
 dialog_norm.gad = 
@@ -303,6 +309,7 @@ dialog_norm.gad =
     defaultMesh.gad; 
     mesh.gad; 
     baseMesh_path.gad; 
+    mesh2.gad; 
 } 
 // dialog.bot.ui
 
