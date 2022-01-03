@@ -1,6 +1,6 @@
-// Magic: 706db32d
+// Magic: f197565
 // Automatically generated PSI dialog (PSI version 19.0.455)
-// Sun Jan  2 08:01:18 2022
+// Mon Jan  3 08:31:29 2022
 
 
 f_tmp = FLOAT_FIELD;	// dialog.top.ui
@@ -255,17 +255,19 @@ uniform.gad = ROW
     { WIDTH(0.1) }
 }
 
-length.gad = 
+deleteEnds.gad = ROW
 {
+    HSTRETCH
+    { WIDTH(0.18) }
 
- LAYOUT(horizontal) HSTRETCH
- { WIDTH(0.18) }
+    { WIDTH(1.5) }
+    { WIDTH(0.08) }
 
- length.label = PARM_LABEL("Length", "length") WIDTH(1.5);
- PARM(float, 1, "length", none, none) RANGE(0,5)
-	LOCK_RANGE_MIN LABELREF(length.label) HSTRETCH;
+    PARM_BUTTON("deleteEnds", "deleteEnds") toggle VALUE(deleteEnds.val);
 
-  { WIDTH(0.1) }
+    { HSTRETCH }
+
+    { WIDTH(0.1) }
 }
 
 sepparm3.gad = 
@@ -286,7 +288,7 @@ points3.gad =
  { WIDTH(0.18) }
 
  points3.label = PARM_LABEL("Points", "points3") WIDTH(1.5);
- PARM(integer, 1, "points3", none, none) RANGE(1,50)
+ PARM(integer, 1, "points3", none, none) RANGE(2,50)
 	LOCK_RANGE_MIN LABELREF(points3.label) HSTRETCH;
 
   { WIDTH(0.1) }
@@ -475,7 +477,7 @@ meshA.gad =
 
             HMARGIN(0) VMARGIN(2p) SPACING(0, 2p)
 	    uniform.gad;		
-	    length.gad;		
+	    deleteEnds.gad;		
 	    sepparm3.gad;		
 	    points3.gad;		
 	    dist3.gad;		
