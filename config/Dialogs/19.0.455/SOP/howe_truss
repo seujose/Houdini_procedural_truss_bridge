@@ -1,6 +1,6 @@
-// Magic: 6239206d
+// Magic: 706db32d
 // Automatically generated PSI dialog (PSI version 19.0.455)
-// Sat Jan  1 10:08:12 2022
+// Sun Jan  2 08:01:18 2022
 
 
 f_tmp = FLOAT_FIELD;	// dialog.top.ui
@@ -175,19 +175,6 @@ curvePath.gad =
  { WIDTH(0.1) }
 }
 
-base_mesh.gad = ROW
-{
-   HSTRETCH
-   { WIDTH(0.18) }
-
-   base_mesh.label = PARM_LABEL("base_mesh", "base_mesh") WIDTH(1.5);
-   PARM(float, 3, "base_mesh", none, none, "X,Y,Z")
-	RANGE(-1,1)  LABELREF(base_mesh.label)
-	HSTRETCH;
-
-    { WIDTH(0.1) }
-}
-
 dist.gad = 
 {
 
@@ -240,15 +227,206 @@ points2.gad =
   { WIDTH(0.1) }
 }
 
-meshLevel0.gad = 
+base_mesh.gad = ROW
+{
+   HSTRETCH
+   { WIDTH(0.18) }
+
+   base_mesh.label = PARM_LABEL("base_mesh", "base_mesh") WIDTH(1.5);
+   PARM(float, 3, "base_mesh", none, none, "X,Y,Z")
+	RANGE(-1,1)  LABELREF(base_mesh.label)
+	HSTRETCH;
+
+    { WIDTH(0.1) }
+}
+
+uniform.gad = ROW
+{
+    HSTRETCH
+    { WIDTH(0.18) }
+
+    { WIDTH(1.5) }
+    { WIDTH(0.08) }
+
+    PARM_BUTTON("uniform", "uniform") toggle VALUE(uniform.val);
+
+    { HSTRETCH }
+
+    { WIDTH(0.1) }
+}
+
+length.gad = 
+{
+
+ LAYOUT(horizontal) HSTRETCH
+ { WIDTH(0.18) }
+
+ length.label = PARM_LABEL("Length", "length") WIDTH(1.5);
+ PARM(float, 1, "length", none, none) RANGE(0,5)
+	LOCK_RANGE_MIN LABELREF(length.label) HSTRETCH;
+
+  { WIDTH(0.1) }
+}
+
+sepparm3.gad = 
+
+{
+    LAYOUT(vertical) HSTRETCH HMARGIN(0.18, 0.1)
+    NO_MARGIN_SPACING_SCALE
+
+    { HEIGHT(0.1) }
+    SEPARATOR;
+    { HEIGHT(0.1) }
+}
+
+points3.gad = 
+{
+
+ LAYOUT(horizontal) HSTRETCH
+ { WIDTH(0.18) }
+
+ points3.label = PARM_LABEL("Points", "points3") WIDTH(1.5);
+ PARM(integer, 1, "points3", none, none) RANGE(1,50)
+	LOCK_RANGE_MIN LABELREF(points3.label) HSTRETCH;
+
+  { WIDTH(0.1) }
+}
+
+dist3.gad = 
+{
+
+ LAYOUT(horizontal) HSTRETCH
+ { WIDTH(0.18) }
+
+ dist3.label = PARM_LABEL("Length", "dist3") WIDTH(1.5);
+ PARM(float, 1, "dist3", none, none) RANGE(0,10)
+	 LABELREF(dist3.label) HSTRETCH;
+
+  { WIDTH(0.1) }
+}
+
+sepparm.gad = 
+
+{
+    LAYOUT(vertical) HSTRETCH HMARGIN(0.18, 0.1)
+    NO_MARGIN_SPACING_SCALE
+
+    { HEIGHT(0.1) }
+    SEPARATOR;
+    { HEIGHT(0.1) }
+}
+
+points4.gad = 
+{
+
+ LAYOUT(horizontal) HSTRETCH
+ { WIDTH(0.18) }
+
+ points4.label = PARM_LABEL("Points", "points4") WIDTH(1.5);
+ PARM(integer, 1, "points4", none, none) RANGE(1,50)
+	LOCK_RANGE_MIN LABELREF(points4.label) HSTRETCH;
+
+  { WIDTH(0.1) }
+}
+
+dist4.gad = 
+{
+
+ LAYOUT(horizontal) HSTRETCH
+ { WIDTH(0.18) }
+
+ dist4.label = PARM_LABEL("Length", "dist4") WIDTH(1.5);
+ PARM(float, 1, "dist4", none, none) RANGE(0,10)
+	 LABELREF(dist4.label) HSTRETCH;
+
+  { WIDTH(0.1) }
+}
+
+sepparm2.gad = 
+
+{
+    LAYOUT(vertical) HSTRETCH HMARGIN(0.18, 0.1)
+    NO_MARGIN_SPACING_SCALE
+
+    { HEIGHT(0.1) }
+    SEPARATOR;
+    { HEIGHT(0.1) }
+}
+
+base_mesh2.gad = ROW
+{
+   HSTRETCH
+   { WIDTH(0.18) }
+
+   base_mesh2.label = PARM_LABEL("base_mesh", "base_mesh2") WIDTH(1.5);
+   PARM(float, 3, "base_mesh2", none, none, "X,Y,Z")
+	RANGE(-1,1)  LABELREF(base_mesh2.label)
+	HSTRETCH;
+
+    { WIDTH(0.1) }
+}
+
+length2.gad = 
+{
+
+ LAYOUT(horizontal) HSTRETCH
+ { WIDTH(0.18) }
+
+ length2.label = PARM_LABEL("Length", "length2") WIDTH(1.5);
+ PARM(float, 1, "length2", none, none) RANGE(0,5)
+	LOCK_RANGE_MIN LABELREF(length2.label) HSTRETCH;
+
+  { WIDTH(0.1) }
+}
+
+points5.gad = 
+{
+
+ LAYOUT(horizontal) HSTRETCH
+ { WIDTH(0.18) }
+
+ points5.label = PARM_LABEL("Points", "points5") WIDTH(1.5);
+ PARM(integer, 1, "points5", none, none) RANGE(1,50)
+	LOCK_RANGE_MIN LABELREF(points5.label) HSTRETCH;
+
+  { WIDTH(0.1) }
+}
+
+dist5.gad = 
+{
+
+ LAYOUT(horizontal) HSTRETCH
+ { WIDTH(0.18) }
+
+ dist5.label = PARM_LABEL("Length", "dist5") WIDTH(1.5);
+ PARM(float, 1, "dist5", none, none) RANGE(0,10)
+	 LABELREF(dist5.label) HSTRETCH;
+
+  { WIDTH(0.1) }
+}
+
+base_mesh3.gad = ROW
+{
+   HSTRETCH
+   { WIDTH(0.18) }
+
+   base_mesh3.label = PARM_LABEL("base_mesh", "base_mesh3") WIDTH(1.5);
+   PARM(float, 2, "base_mesh3", none, none, "X,Y")
+	RANGE(-1,1)  LABELREF(base_mesh3.label)
+	HSTRETCH;
+
+    { WIDTH(0.1) }
+}
+
+meshA1.gad = 
 {
     LAYOUT(vertical) HSTRETCH
 
-    TABDIALOG2 flat "meshLevel0.gad"
+    TABDIALOG2 flat "meshA1.gad"
     { 
-	VALUE(meshLevel0.gad.val) STRETCH(1,0)
+	VALUE(meshA1.gad.val) STRETCH(1,0)
 
-	TAB "meshLevel0"
+	TAB "meshA1"
 	{
 	    LAYOUT(vertical) STRETCH
 
@@ -259,7 +437,7 @@ meshLevel0.gad =
 	    { STRETCH(1,1) }
 	}
 
-	TAB "meshLevel1"
+	TAB "meshA2"
 	{
 	    LAYOUT(vertical) STRETCH
 
@@ -272,12 +450,64 @@ meshLevel0.gad =
     } 
 }
 
+meshA.gad = 
+{
+    LAYOUT(vertical) HSTRETCH
+
+    TABDIALOG2 flat "meshA.gad"
+    { 
+	VALUE(meshA.gad.val) STRETCH(1,0)
+
+	TAB "meshA"
+	{
+	    LAYOUT(vertical) STRETCH
+
+            HMARGIN(0) VMARGIN(2p) SPACING(0, 2p)
+	    meshA1.gad;		
+	    base_mesh.gad;		
+
+	    { STRETCH(1,1) }
+	}
+
+	TAB "meshB"
+	{
+	    LAYOUT(vertical) STRETCH
+
+            HMARGIN(0) VMARGIN(2p) SPACING(0, 2p)
+	    uniform.gad;		
+	    length.gad;		
+	    sepparm3.gad;		
+	    points3.gad;		
+	    dist3.gad;		
+	    sepparm.gad;		
+	    points4.gad;		
+	    dist4.gad;		
+	    sepparm2.gad;		
+	    base_mesh2.gad;		
+
+	    { STRETCH(1,1) }
+	}
+
+	TAB "meshC"
+	{
+	    LAYOUT(vertical) STRETCH
+
+            HMARGIN(0) VMARGIN(2p) SPACING(0, 2p)
+	    length2.gad;		
+	    points5.gad;		
+	    dist5.gad;		
+	    base_mesh3.gad;		
+
+	    { STRETCH(1,1) }
+	}
+    } 
+}
+
 mesh2.gad = 
 GROUP collapsible "mesh" flat  
 {
     VALUE(mesh2.gad.val) LAYOUT(vertical) HSTRETCH
-	    base_mesh.gad;		
-	    meshLevel0.gad;		
+	    meshA.gad;		
 } 
 
 baseMesh_path.gad = 

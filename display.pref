@@ -21,7 +21,7 @@
         shadowmapsize ( 2048 )
         sceneantialias ( 2 )
         textureAnisotropy ( 4 )
-        viewGamma ( 2.2 )
+        viewGamma ( 1.554 )
         ambOcclusionLevel ( 3 )
         maxTextureSize ( 2048 2048 )
         scaleTextureSize ( 100 )
@@ -162,7 +162,7 @@
         primnmlsmode ( on )
         boundarymode ( none )
         uvboundarymode ( uv )
-        shadingmode ( shade )
+        shadingmode ( matcap_wire )
     }
     SELECTED_SCENE_OBJECT_RENDERING_OPTIONS
     {
@@ -207,7 +207,7 @@
         primnmlsmode ( on )
         boundarymode ( none )
         uvboundarymode ( uv )
-        shadingmode ( shade )
+        shadingmode ( matcap_wire )
     }
     GHOST_SCENE_OBJECT_RENDERING_OPTIONS
     {
@@ -252,7 +252,7 @@
         primnmlsmode ( on )
         boundarymode ( none )
         uvboundarymode ( uv )
-        shadingmode ( shade )
+        shadingmode ( matcap_wire )
     }
     DISPLAY_MODEL_RENDERING_OPTIONS
     {
@@ -297,7 +297,7 @@
         primnmlsmode ( on )
         boundarymode ( none )
         uvboundarymode ( uv )
-        shadingmode ( shade_wire )
+        shadingmode ( matcap_wire )
     }
     CURRENT_MODEL_RENDERING_OPTIONS
     {
@@ -598,8 +598,8 @@ envmap ( 0 )
     fgImageEnable ( 1 )
     fgImageDepth ( 1 )
 }
-near ( 0.208737 )
-far ( 58770.5 )
+near ( 0.0367711 )
+far ( 26781.3 )
 fov ( 90 )
 adjustlimits ( 3 )
 orthogrid_spacing ( 0.2 0.2 )
