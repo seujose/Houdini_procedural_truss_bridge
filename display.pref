@@ -1,7 +1,7 @@
 {
     COMMON_RENDERING_OPTIONS
     {
-        colorscheme ( light )
+        colorscheme ( dark )
         auxcolor ( n )
         visibleobjects ( * )
         primmask ( 4294967295 )
@@ -598,14 +598,14 @@ envmap ( 0 )
     fgImageEnable ( 1 )
     fgImageDepth ( 1 )
 }
-near ( 0.0367711 )
-far ( 26781.3 )
+near ( 0.0790328 )
+far ( 61852.6 )
 fov ( 90 )
 adjustlimits ( 3 )
 orthogrid_spacing ( 0.2 0.2 )
 orthogrid_ruler ( 5 5 )
 orthogrid_rulertype ( main_axes )
-orthogrid_display ( 1 )
+orthogrid_display ( 0 )
 uvgrid_refspacing ( 0.1 0.1 )
 uvgrid_refdisplay ( 1 )
 uvgrid_pixelspacing ( 64 64 )

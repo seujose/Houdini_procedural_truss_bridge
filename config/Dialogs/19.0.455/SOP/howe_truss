@@ -1,6 +1,6 @@
-// Magic: f197565
+// Magic: 5fe45def
 // Automatically generated PSI dialog (PSI version 19.0.455)
-// Mon Jan  3 08:31:29 2022
+// Mon Jan  3 09:43:26 2022
 
 
 f_tmp = FLOAT_FIELD;	// dialog.top.ui
@@ -420,6 +420,19 @@ base_mesh3.gad = ROW
     { WIDTH(0.1) }
 }
 
+base_mesh4.gad = ROW
+{
+   HSTRETCH
+   { WIDTH(0.18) }
+
+   base_mesh4.label = PARM_LABEL("base_mesh", "base_mesh4") WIDTH(1.5);
+   PARM(float, 2, "base_mesh4", none, none, "X,Y")
+	RANGE(-1,1)  LABELREF(base_mesh4.label)
+	HSTRETCH;
+
+    { WIDTH(0.1) }
+}
+
 meshA1.gad = 
 {
     LAYOUT(vertical) HSTRETCH
@@ -499,6 +512,16 @@ meshA.gad =
 	    points5.gad;		
 	    dist5.gad;		
 	    base_mesh3.gad;		
+
+	    { STRETCH(1,1) }
+	}
+
+	TAB "meshD"
+	{
+	    LAYOUT(vertical) STRETCH
+
+            HMARGIN(0) VMARGIN(2p) SPACING(0, 2p)
+	    base_mesh4.gad;		
 
 	    { STRETCH(1,1) }
 	}
