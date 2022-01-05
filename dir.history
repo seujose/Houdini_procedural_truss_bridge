@@ -2,8 +2,8 @@ HIP
 {
 C:/Program Files (x86)/Steam/steamapps/common/Houdini Indie/bin/
 C:/Users/master/Documents/GitHub/proceduralCorridor/houdini/
-C:/Users/master/Documents/houdini19.0/scenes/
 C:/Users/master/Documents/houdini19.0/scenes/backup/
+C:/Users/master/Documents/houdini19.0/scenes/
 }
 PIC
 {
@@ -17,6 +17,9 @@ $HOME/GitHub/proceduralCorridor/maya/truss_bridge/assets/
 $HOUDINI_USER_PREF_DIR/maya/truss/assets/
 $HOUDINI_USER_PREF_DIR/unreal/truss/Content/
 $HOME/houdini19.0/maya/truss/assets/
+../../file1/
+../../testgeometry_pighead1/
+../../testgeometry_pighead1/testgeometry_pighead1/
 }
 OTL
 {

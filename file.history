@@ -29,6 +29,9 @@ $HOUDINI_USER_PREF_DIR/maya/truss/assets/pCube2.fbx
 $HOUDINI_USER_PREF_DIR/maya/truss/assets/pCube1.fbx
 $HOUDINI_USER_PREF_DIR/unreal/truss/Content/S_Worn_Wooden_Beam_tgmrafyfa_lod3.FBX
 $HOME/houdini19.0/maya/truss/assets/pCube1.fbx
+../../file1/
+../../testgeometry_pighead1/
+../../testgeometry_pighead1/testgeometry_pighead1/
 }
 OTL
 {

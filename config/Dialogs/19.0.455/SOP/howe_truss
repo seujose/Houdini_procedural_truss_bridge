@@ -1,6 +1,6 @@
-// Magic: 5fe45def
+// Magic: 94eae5c0
 // Automatically generated PSI dialog (PSI version 19.0.455)
-// Mon Jan  3 09:43:26 2022
+// Wed Jan  5 08:08:35 2022
 
 
 f_tmp = FLOAT_FIELD;	// dialog.top.ui
@@ -18,6 +18,32 @@ height.gad =
   { WIDTH(0.1) }
 }
 
+detailHeight.gad = 
+{
+
+ LAYOUT(horizontal) HSTRETCH
+ { WIDTH(0.18) }
+
+ detailHeight.label = PARM_LABEL("detailHeight", "detailHeight") WIDTH(1.5);
+ PARM(float, 1, "detailHeight", none, none) RANGE(0,10)
+	 LABELREF(detailHeight.label) HSTRETCH;
+
+  { WIDTH(0.1) }
+}
+
+detailWidth.gad = 
+{
+
+ LAYOUT(horizontal) HSTRETCH
+ { WIDTH(0.18) }
+
+ detailWidth.label = PARM_LABEL("detailWidth", "detailWidth") WIDTH(1.5);
+ PARM(float, 1, "detailWidth", none, none) RANGE(0,10)
+	 LABELREF(detailWidth.label) HSTRETCH;
+
+  { WIDTH(0.1) }
+}
+
 seed.gad = 
 {
 
@@ -27,19 +53,6 @@ seed.gad =
  seed.label = PARM_LABEL("seed", "seed") WIDTH(1.5);
  PARM(float, 1, "seed", none, none) RANGE(0,10)
 	 LABELREF(seed.label) HSTRETCH;
-
-  { WIDTH(0.1) }
-}
-
-plankOffset.gad = 
-{
-
- LAYOUT(horizontal) HSTRETCH
- { WIDTH(0.18) }
-
- plankOffset.label = PARM_LABEL("plankOffset", "plankOffset") WIDTH(1.5);
- PARM(float, 1, "plankOffset", none, none) RANGE(0.5,2)
-	 LABELREF(plankOffset.label) HSTRETCH;
 
   { WIDTH(0.1) }
 }
@@ -64,21 +77,8 @@ endsOffset.gad =
  { WIDTH(0.18) }
 
  endsOffset.label = PARM_LABEL("endsOffset", "endsOffset") WIDTH(1.5);
- PARM(float, 1, "endsOffset", none, none) RANGE(0,10)
+ PARM(float, 1, "endsOffset", none, none) RANGE(1,10)
 	 LABELREF(endsOffset.label) HSTRETCH;
-
-  { WIDTH(0.1) }
-}
-
-supportOffset.gad = 
-{
-
- LAYOUT(horizontal) HSTRETCH
- { WIDTH(0.18) }
-
- supportOffset.label = PARM_LABEL("supportOffset", "supportOffset") WIDTH(1.5);
- PARM(float, 1, "supportOffset", none, none) RANGE(0.10000000000000001,0.29999999999999999)
-	 LABELREF(supportOffset.label) HSTRETCH;
 
   { WIDTH(0.1) }
 }
@@ -96,41 +96,17 @@ Width.gad =
   { WIDTH(0.1) }
 }
 
-defaultMesh.gad = 
+customMesh.gad = ROW
 {
+    HSTRETCH
+    { WIDTH(0.18) }
 
- LAYOUT(horizontal) HSTRETCH
- { WIDTH(0.18) }
+    { WIDTH(1.5) }
+    { WIDTH(0.08) }
 
- defaultMesh.label = PARM_LABEL("defaultMesh", "defaultMesh") WIDTH(1.5);
- PARM(integer, 1, "defaultMesh", none, none) RANGE(0,1)
-	 LABELREF(defaultMesh.label) HSTRETCH;
+    PARM_BUTTON("customMesh", "customMesh") toggle VALUE(customMesh.val);
 
-  { WIDTH(0.1) }
-}
-
-meshLevel2.gad = ROW
-{
-   HSTRETCH
-   { WIDTH(0.18) }
-
-   meshLevel2.label = PARM_LABEL("meshLevel2", "meshLevel2") WIDTH(1.5);
-   PARM(float, 3, "meshLevel2", none, none, "X,Y,Z")
-	RANGE(-1,1)  LABELREF(meshLevel2.label)
-	HSTRETCH;
-
-    { WIDTH(0.1) }
-}
-
-meshLevel3.gad = ROW
-{
-   HSTRETCH
-   { WIDTH(0.18) }
-
-   meshLevel3.label = PARM_LABEL("meshLevel3", "meshLevel3") WIDTH(1.5);
-   PARM(float, 3, "meshLevel3", none, none, "X,Y,Z")
-	RANGE(-1,1)  LABELREF(meshLevel3.label)
-	HSTRETCH;
+    { HSTRETCH }
 
     { WIDTH(0.1) }
 }
@@ -543,26 +519,17 @@ GROUP collapsible "baseMesh_path" flat
 	    curvePath.gad;		
 } 
 
-mesh.gad = 
-GROUP collapsible "mesh" flat  
-{
-    VALUE(mesh.gad.val) LAYOUT(vertical) HSTRETCH
-	    meshLevel2.gad;		
-	    meshLevel3.gad;		
-} 
-
 dialog_norm.gad = 
 {
     LAYOUT(vertical) SPACING(0.02) HSTRETCH 
     height.gad; 
+    detailHeight.gad; 
+    detailWidth.gad; 
     seed.gad; 
-    plankOffset.gad; 
     step.gad; 
     endsOffset.gad; 
-    supportOffset.gad; 
     Width.gad; 
-    defaultMesh.gad; 
-    mesh.gad; 
+    customMesh.gad; 
     baseMesh_path.gad; 
     mesh2.gad; 
 } 
